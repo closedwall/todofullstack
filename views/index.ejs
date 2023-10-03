@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs")  %>
+<main class="container">
+    <di class="date">
+        <p><%=heading %> </p>
+    </di>
+    <div class="box">
+        <% todo.forEach(val=>{ %>
+            <form action="/delete" method="POST">
+            <div class="task">
+                    <input type="checkbox" name="checkbox" value="<%= val._id %>" class="checkbox" onChange="this.form.submit()">
+                    <p><%= val.name %></p>
+                </div>
+                <input type="hidden" name="title" value="<%= heading %>">
+            </form>
+            <hr>
+        <% }) %>
+        <form class="inputform" action="/" method="post">
+            <input type="text" placeholder="New Item" name="newItem">
+            <button type="submit" name="list" value="<%=heading  %>">+</button>
+        </form>
+    </div>
+</main>
+<%- include("partials/footer.ejs")  %>

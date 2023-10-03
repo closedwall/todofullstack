@@ -1,0 +1,93 @@
+body{
+    background-color: #e4e9fd;
+}
+hr{
+    margin: 0;
+}
+.date{
+    width: 60%;
+    margin: 3em 2em;
+    background-color:#a683e3 ;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px -5px rgb(0, 0, 0,0.3);
+    display: flex;
+    justify-content: center;
+}
+.date>p{
+    color:white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+.box{
+    width: 60%;
+    box-shadow: 5px 5px 15px -5px rgb(0, 0, 0,0.3);
+}
+
+.task {
+    display: flex;
+    background-color: white;
+    padding: 20px 20px;
+}
+.task input{
+    margin-right: 40px;
+}
+.task p{
+    position: relative;
+    margin: 0;
+}
+.strike::after{
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #a683e3;
+}
+
+form.inputform{
+    /* margin-top: 5rem; */
+    display: flex;
+    background-color: white;
+}
+form.inputform input{
+    margin-left: 1rem;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    border: none;
+}
+button{
+    float: right;
+    margin: 5px;
+    align-self: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: #a683e3;
+    border: none;
+    color: white;
+}
+input:focus{
+    outline: none;
+    border-bottom:2px solid #a683e3 ;
+}
+footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
