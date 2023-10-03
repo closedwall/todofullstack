@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import _ from 'lodash';
+import 'dotenv/config'
 
 const app = express();
 // const port = 3000;
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
 
 //connnecting to database
-mongoose.connect("mongodb+srv://yadavrajesh5612:test123@cluster0.wiw8apf.mongodb.net/todolistDB");
+mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.pswd}@cluster0.wiw8apf.mongodb.net/todolistDB`);
 console.log("connected to db");
 // creating schema of the listItem
 const todoSchema = {
